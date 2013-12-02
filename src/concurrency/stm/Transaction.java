@@ -10,9 +10,9 @@ import java.util.concurrent.atomic.AtomicLong;
  * @author mishadoff
  */
 public final class Transaction extends Context{
-    private HashMap<Ref, Object> inTxMap = new HashMap<>();
-    private HashSet<Ref> toUpdate = new HashSet<>();
-    private HashMap<Ref, Long> version = new HashMap<>();
+    private HashMap<Ref, Object> inTxMap = new HashMap<Ref, Object>();
+    private HashSet<Ref> toUpdate = new HashSet<Ref>();
+    private HashMap<Ref, Long> version = new HashMap<Ref, Long>();
 
     private long revision;
     private static AtomicLong transactionNum = new AtomicLong(0);
