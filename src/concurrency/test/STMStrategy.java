@@ -1,6 +1,5 @@
 package concurrency.test;
 
-import concurrency.stm.Ref;
 import concurrency.stm.STM;
 import concurrency.stm.Transaction;
 import concurrency.stm.TransactionBlock;
@@ -20,7 +19,7 @@ public class STMStrategy implements TransferStrategy {
                 long old2 = b.getRef().getValue(tx);
                 b.getRef().setValue(old2 + amount, tx);
             }
-        }    , new Ref<Integer>(amount)
+        }, amount
         );
 
        // System.out.println(numb);
